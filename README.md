@@ -4,6 +4,7 @@
 ## Contents
 - [Installation](#installation)
 - [Run](#run)
+- [Run Tests](#run-tests)
 - [Structure](#structure)
 - [Tasks](#tasks)
 
@@ -19,9 +20,16 @@ pip install -r ./requirements.txt
 ## Run
 Use this command to run server
 ```shell
-python -m server
+python -m src.server
 ```
 
+[Contents](#contents)
+
+## Run Tests
+Use this command to run tests
+```shell
+python -m src.tests
+```
 [Contents](#contents)
 
 ## Structure
