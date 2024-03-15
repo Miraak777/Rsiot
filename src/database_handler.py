@@ -32,3 +32,42 @@ class DatabaseHandler:
         connection.commit()
         connection.close()
         return goods_list
+
+    def add_good(self, naming: str, price: float, category: str) -> None:
+        connection = connect(self.db_path)
+        cursor = connection.cursor()
+        cursor.execute('''
+        INSERT INTO Goods 
+        (naming, price, category) VALUES (?, ?, ?)
+        ''',
+                       (naming, price, category)
+                       )
+        connection.commit()
+        connection.close()
+
+    def del_good(self, id: int) -> None:
+        connection = connect(self.db_path)
+        cursor = connection.cursor()
+        cursor.execute('''
+        DELETE FROM Goods 
+        WHERE id = ?
+        ''',
+                       id
+                       )
+        connection.commit()
+        connection.close()
+
+    def update_good(self, id: int, naming: str, price: float, category: str) -> None:
+        connection = connect(self.db_path)
+        cursor = connection.cursor()
+        cursor.execute('''
+        UPDATE Goods SET 
+        naming = ?,
+        price = ?,
+        category = ?
+        WHERE id = ?
+        ''',
+                       (naming, price, category, id)
+                       )
+        connection.commit()
+        connection.close()
