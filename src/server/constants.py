@@ -15,3 +15,7 @@ class ServerConstants:
     PORT: str = "port"
     POST: str = "POST"
     GET: str = "GET"
+    ID: str = "id"
+    NAMING: str = "naming"
+    PRICE: str = "price"
+    CATEGORY: str = "category"
