@@ -21,6 +21,3 @@ python -m server
 ```
 
 ## Structure
-
-
-## Task Variant
